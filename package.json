@@ -5,7 +5,7 @@
   "scripts": {
     "test": "npm-run-all test:*",
     "test:html": "globstar nu-html-checker *.html",
-    "test:js": "jshint js/*.js",
+    "test:js": "glob-run jshint js/*.js",
     "init-project": "npm install && npm-run-all init:*",
     "init:dirs": "mkdirp sass css vendor images js",
     "init:files": "touch README.md index.html sass/style.scss js/script.js",
@@ -28,6 +28,7 @@
   "devDependencies": {
     "autoprefixer-cli": "^1.0.0",
     "browser-sync": "^2.23.6",
+    "glob-run": "^0.1.6",
     "globstar": "^1.0.0",
     "jshint": "^2.9.5",
     "mkdirp": "^0.5.1",
